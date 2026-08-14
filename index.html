@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnowKeep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #380000;
+      color: #f3ce66;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #a01415;
+      border-bottom: 1px solid #651616;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header .snowflake {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    header h1 {
+      font-family: 'Spectral', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #f3ce66;
+      letter-spacing: 0.5px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .hero {
+      margin-bottom: 56px;
+    }
+
+    .hero h2 {
+      font-family: 'Spectral', serif;
+      font-size: 42px;
+      font-weight: 500;
+      color: #f3ce66;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ba4646;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    .card {
+      background: #a01415;
+      border: 1px solid #651616;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #f3ce66;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #ba4646;
+      line-height: 1.6;
+    }
+
+    .privacy {
+      background: #a01415;
+      border: 1px solid #651616;
+      border-left: 3px solid #de1515;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .privacy h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #f3ce66;
+      margin-bottom: 12px;
+    }
+
+    .privacy ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .privacy ul li {
+      font-size: 15px;
+      color: #ba4646;
+      line-height: 1.6;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .privacy ul li::before {
+      content: '❄';
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+      color: #f3ce66;
+      top: 2px;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: #ba4646;
+    }
+
+    .contact a {
+      color: #f3ce66;
+      text-decoration: none;
+      border-bottom: 1px solid #651616;
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+
+    .contact a:hover {
+      border-color: #f3ce66;
+    }
+
+    footer {
+      background: #a01415;
+      border-top: 1px solid #651616;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #651616;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="snowflake">❄</span>
+    <h1>SnowKeep</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>A private homelab &amp; finance management app</h2>
+      <p>SnowKeep is a personal, self-hosted application built for private household use. It is not a commercial product, not publicly distributed, and has no public user base.</p>
+    </section>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Who uses it</h3>
+        <p>SnowKeep is used exclusively by its developer and one caregiver. It is a closed, private application with no sign-ups, no public access, and no third-party users.</p>
+      </div>
+      <div class="card">
+        <h3>What it does</h3>
+        <p>SnowKeep integrates with personal bank accounts via Plaid to provide a unified view of balances, transactions, and statements for personal budgeting and financial awareness.</p>
+      </div>
+      <div class="card">
+        <h3>How it's built</h3>
+        <p>Built as a native mobile and desktop application using Tauri and SvelteKit, backed by a self-hosted PocketBase instance. All data stays on private infrastructure.</p>
+      </div>
+      <div class="card">
+        <h3>Bank connectivity</h3>
+        <p>Plaid is used solely to read account balances and transaction history for personal budgeting. No payments, transfers, or financial actions are initiated through the app.</p>
+      </div>
+    </div>
+
+    <div class="privacy">
+      <h3>Data &amp; privacy commitments</h3>
+      <ul>
+        <li>No user data is collected, sold, or shared with any third party.</li>
+        <li>Financial data retrieved via Plaid is stored only on private, self-hosted infrastructure.</li>
+        <li>The app does not initiate payments, transfers, or any financial transactions.</li>
+        <li>Bank credentials are never stored — authentication is handled entirely through Plaid Link.</li>
+        <li>This application is not available to the public and has no commercial intent.</li>
+      </ul>
+    </div>
+
+    <p class="contact">Questions or concerns? Contact the developer at <a href="mailto:raii@raiiwinters.net">raii@raiiwinters.net</a>.</p>
+  </main>
+
+  <footer>
+    &copy; 2026 Raii Winters &mdash; SnowKeep is a private personal project.
+  </footer>
+
+</body>
+</html>
