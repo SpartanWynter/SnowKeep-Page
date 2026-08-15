@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account &mdash; SnowKeep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #380000;
+      color: #f3ce66;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #a01415;
+      border-bottom: 1px solid #651616;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header .snowflake {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    header h1 {
+      font-family: 'Spectral', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #f3ce66;
+      letter-spacing: 0.5px;
+    }
+
+    header a.back {
+      margin-left: auto;
+      color: #f3ce66;
+      opacity: 0.75;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #ba4646;
+      padding-bottom: 1px;
+    }
+
+    header a.back:hover {
+      opacity: 1;
+      border-color: #f3ce66;
+    }
+
+    main {
+      flex: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .hero {
+      margin-bottom: 48px;
+    }
+
+    .hero h2 {
+      font-family: 'Spectral', serif;
+      font-size: 38px;
+      font-weight: 500;
+      color: #f3ce66;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p.updated {
+      font-size: 14px;
+      color: #f3ce66;
+      opacity: 0.6;
+    }
+
+    .hero p.summary {
+      font-size: 17px;
+      color: #f3ce66;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-top: 18px;
+    }
+
+    section.block {
+      margin-bottom: 44px;
+    }
+
+    section.block h3 {
+      font-family: 'Spectral', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #f3ce66;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #651616;
+    }
+
+    section.block p {
+      font-size: 15px;
+      color: #f3ce66;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-bottom: 14px;
+    }
+
+    ol.steps {
+      list-style: none;
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    ol.steps li {
+      counter-increment: step;
+      background: #651616;
+      border-radius: 12px;
+      padding: 18px 20px 18px 56px;
+      position: relative;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #f3ce66;
+      opacity: 0.9;
+    }
+
+    ol.steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #de1515;
+      color: #4A1B0C;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    table.data-table th, table.data-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #651616;
+      color: #f3ce66;
+      line-height: 1.5;
+    }
+
+    table.data-table th {
+      opacity: 0.6;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    table.data-table td {
+      opacity: 0.9;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: #f3ce66;
+      opacity: 0.85;
+    }
+
+    .contact a {
+      color: #f3ce66;
+      text-decoration: none;
+      border-bottom: 1px solid #ba4646;
+      padding-bottom: 1px;
+    }
+
+    .contact a:hover {
+      border-color: #f3ce66;
+    }
+
+    footer {
+      background: #a01415;
+      border-top: 1px solid #651616;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #f3ce66;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="snowflake">&#10052;</span>
+    <h1>SnowKeep</h1>
+    <a class="back" href="/">&larr; Back to snowkeep.raiiwinters.net</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Delete your account</h2>
+      <p class="updated">Last updated: August 15, 2026</p>
+      <p class="summary">
+        SnowKeep is a private, closed application developed and operated by
+        Raii Winters, used only by two named individuals. There is no
+        self-service account deletion inside the app itself, since account
+        management is handled directly by the developer for both users.
+        This page explains how to request deletion.
+      </p>
+    </section>
+
+    <section class="block">
+      <h3>How to request deletion</h3>
+      <ol class="steps">
+        <li>Email <a href="mailto:dev@raiiwinters.net" style="color:#f3ce66;">dev@raiiwinters.net</a> from the email address associated with your SnowKeep account, with the subject line "Delete my SnowKeep account".</li>
+        <li>State clearly whether you want your entire account deleted, or only specific data (for example, medication history, or a linked bank connection) removed while keeping your account active.</li>
+        <li>The developer will confirm your identity directly, since this is a closed, personally-known-user application, and complete the request.</li>
+      </ol>
+      <p>
+        Because SnowKeep has only two users, requests are typically completed
+        within a few days of being received.
+      </p>
+    </section>
+
+    <section class="block">
+      <h3>What gets deleted</h3>
+      <table class="data-table">
+        <tr>
+          <th>Data type</th>
+          <th>On full account deletion</th>
+        </tr>
+        <tr>
+          <td>Account &amp; login credentials</td>
+          <td>Permanently deleted</td>
+        </tr>
+        <tr>
+          <td>Financial data (via Plaid)</td>
+          <td>Deleted; the Plaid connection is also unlinked, which revokes SnowKeep's access to your bank data</td>
+        </tr>
+        <tr>
+          <td>Medication data &amp; logs</td>
+          <td>Permanently deleted</td>
+        </tr>
+        <tr>
+          <td>Task data</td>
+          <td>Permanently deleted</td>
+        </tr>
+        <tr>
+          <td>Nextcloud &amp; Home Assistant connection references</td>
+          <td>Permanently deleted (the underlying Nextcloud/Home Assistant accounts themselves, if any, are managed separately and are not affected)</td>
+        </tr>
+      </table>
+      <p>
+        Deleted data is removed from SnowKeep's active database. Standard
+        infrastructure backups may retain deleted data for a limited period
+        afterward before being cycled out, but are not accessible through
+        the app and are not used for any purpose other than disaster
+        recovery.
+      </p>
+    </section>
+
+    <p class="contact">Questions about this process? Contact <a href="mailto:dev@raiiwinters.net">dev@raiiwinters.net</a>.</p>
+  </main>
+
+  <footer>
+    &copy; 2026 Raii Winters &mdash; SnowKeep is a private personal project.
+  </footer>
+
+</body>
+</html>
