@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Data &mdash; SnowKeep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #380000;
+      color: #f3ce66;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #a01415;
+      border-bottom: 1px solid #651616;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header .snowflake {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    header h1 {
+      font-family: 'Spectral', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #f3ce66;
+      letter-spacing: 0.5px;
+    }
+
+    header a.back {
+      margin-left: auto;
+      color: #f3ce66;
+      opacity: 0.75;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #ba4646;
+      padding-bottom: 1px;
+    }
+
+    header a.back:hover {
+      opacity: 1;
+      border-color: #f3ce66;
+    }
+
+    main {
+      flex: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .hero {
+      margin-bottom: 48px;
+    }
+
+    .hero h2 {
+      font-family: 'Spectral', serif;
+      font-size: 38px;
+      font-weight: 500;
+      color: #f3ce66;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p.updated {
+      font-size: 14px;
+      color: #f3ce66;
+      opacity: 0.6;
+    }
+
+    .hero p.summary {
+      font-size: 17px;
+      color: #f3ce66;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-top: 18px;
+    }
+
+    section.block {
+      margin-bottom: 44px;
+    }
+
+    section.block h3 {
+      font-family: 'Spectral', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #f3ce66;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #651616;
+    }
+
+    section.block p {
+      font-size: 15px;
+      color: #f3ce66;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #651616;
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+
+    .card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f3ce66;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #f3ce66;
+      line-height: 1.65;
+      opacity: 0.85;
+      margin-bottom: 0;
+    }
+
+    ol.steps {
+      list-style: none;
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    ol.steps li {
+      counter-increment: step;
+      background: #651616;
+      border-radius: 12px;
+      padding: 18px 20px 18px 56px;
+      position: relative;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #f3ce66;
+      opacity: 0.9;
+    }
+
+    ol.steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #de1515;
+      color: #4A1B0C;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: #f3ce66;
+      opacity: 0.85;
+    }
+
+    .contact a {
+      color: #f3ce66;
+      text-decoration: none;
+      border-bottom: 1px solid #ba4646;
+      padding-bottom: 1px;
+    }
+
+    .contact a:hover {
+      border-color: #f3ce66;
+    }
+
+    footer {
+      background: #a01415;
+      border-top: 1px solid #651616;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #f3ce66;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="snowflake">&#10052;</span>
+    <h1>SnowKeep</h1>
+    <a class="back" href="/">&larr; Back to snowkeep.raiiwinters.net</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Delete specific data</h2>
+      <p class="updated">Last updated: August 15, 2026</p>
+      <p class="summary">
+        You don't need to delete your entire SnowKeep account to remove
+        specific pieces of your data. This page covers requesting deletion
+        of individual items while keeping your account active. To delete
+        your whole account instead, see the
+        <a href="/delete-account.html" style="color:#f3ce66;">account deletion page</a>.
+      </p>
+    </section>
+
+    <section class="block">
+      <h3>What you can delete directly, in the app</h3>
+      <p>Most data in SnowKeep can already be deleted yourself, without contacting anyone:</p>
+      <div class="card">
+        <h4>Tasks</h4>
+        <p>Delete any task from the Tasks module directly &mdash; it's removed immediately.</p>
+      </div>
+      <div class="card">
+        <h4>Medications &amp; logs</h4>
+        <p>Delete a medication or an individual dose log entry directly from the Medications module.</p>
+      </div>
+      <div class="card">
+        <h4>Linked bank accounts</h4>
+        <p>Unlink a Plaid-connected bank account from the Financial module &mdash; this revokes SnowKeep's access and removes the associated balance and transaction data.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h3>What requires a request to the developer</h3>
+      <p>
+        Some data isn't yet exposed through a self-service delete control in
+        the app. For these, request removal directly:
+      </p>
+      <ol class="steps">
+        <li>Email <a href="mailto:dev@raiiwinters.net" style="color:#f3ce66;">dev@raiiwinters.net</a> from your account's associated email address, with the subject line "Delete specific data &mdash; SnowKeep".</li>
+        <li>Describe exactly which data you want removed (for example, historical financial transactions from an already-unlinked account, or specific document references).</li>
+        <li>The developer will confirm and complete the request, typically within a few days, without deleting your account or any other data.</li>
+      </ol>
+    </section>
+
+    <p class="contact">Questions about this process? Contact <a href="mailto:dev@raiiwinters.net">dev@raiiwinters.net</a>.</p>
+  </main>
+
+  <footer>
+    &copy; 2026 Raii Winters &mdash; SnowKeep is a private personal project.
+  </footer>
+
+</body>
+</html>
