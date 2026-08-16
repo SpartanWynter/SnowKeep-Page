@@ -137,6 +137,27 @@
       top: 3px;
     }
 
+    .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #f3ce66;
+      text-decoration: none;
+      opacity: 0.8;
+      border-bottom: 1px solid #ba4646;
+      padding-bottom: 1px;
+    }
+
+    .links a:hover {
+      opacity: 1;
+      border-color: #f3ce66;
+    }
+
     .contact {
       font-size: 15px;
       color: #f3ce66;
@@ -174,8 +195,8 @@
 
   <main>
     <section class="hero">
-      <h2>A private homelab &amp; finance management app</h2>
-      <p>SnowKeep is a personal, self-hosted application built for private household use. It is not a commercial product, not publicly distributed, and has no public user base.</p>
+      <h2>A private household management app</h2>
+      <p>SnowKeep is a personal, self-hosted application built for private household use — task tracking, medication reminders, financial visibility, and home infrastructure monitoring, all in one place. It is not a commercial product, not publicly distributed, and has no public user base.</p>
     </section>
 
     <div class="cards">
@@ -185,7 +206,7 @@
       </div>
       <div class="card">
         <h3>What it does</h3>
-        <p>SnowKeep integrates with personal bank accounts via Plaid to provide a unified view of balances, transactions, and statements for personal budgeting and financial awareness.</p>
+        <p>Household and personal task tracking, medication schedules and dose reminders, a private view of bank balances and transactions via Plaid, and monitoring for self-hosted home infrastructure (Nextcloud, Home Assistant, Mailcow, Portainer) — all from one app.</p>
       </div>
       <div class="card">
         <h3>How it's built</h3>
@@ -197,13 +218,19 @@
       </div>
     </div>
 
+    <div class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/delete-account.html">Delete Account</a>
+      <a href="/delete-data.html">Delete Specific Data</a>
+    </div>
+
     <div class="privacy">
       <h3>Data &amp; privacy commitments</h3>
       <ul>
         <li>No user data is collected, sold, or shared with any third party.</li>
-        <li>Financial data retrieved via Plaid is stored only on private, self-hosted infrastructure.</li>
-        <li>The app does not initiate payments, transfers, or any financial transactions.</li>
-        <li>Bank credentials are never stored — authentication is handled entirely through Plaid Link.</li>
+        <li>Medication, task, and financial data are stored only on private, self-hosted infrastructure.</li>
+        <li>Financial data retrieved via Plaid is stored only on private, self-hosted infrastructure — the app does not initiate payments, transfers, or any financial transactions, and bank credentials are never stored, since authentication is handled entirely through Plaid Link.</li>
+        <li>Home infrastructure credentials (Nextcloud, Home Assistant, Mailcow, Portainer) are entered by the user and used only to connect to their own self-hosted services.</li>
         <li>This application is not available to the public and has no commercial intent.</li>
       </ul>
     </div>
