@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.raiiwinters.snowkeep",
+      "sha256_cert_fingerprints": [
+        "AD:6C:2F:6A:19:34:7C:5B:BD:EA:6A:77:CD:EE:2B:99:2D:AA:40:E7:A1:45:79:FC:61:53:D3:5E:7E:6F:BE:5D",
+        "BF:BD:CF:07:07:DC:D5:3B:DA:4C:68:F8:8B:47:04:5C:F4:0E:33:8B:2A:CA:51:1E:BC:83:FE:FB:69:A2:DF:28"
+      ]
+    }
+  }
+]
