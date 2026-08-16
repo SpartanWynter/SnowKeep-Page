@@ -245,18 +245,36 @@
         the app. For these, request removal directly:
       </p>
       <ol class="steps">
-        <li>Email <a href="mailto:dev@raiiwinters.net" style="color:#f3ce66;">dev@raiiwinters.net</a> from your account's associated email address, with the subject line "Delete specific data &mdash; SnowKeep".</li>
+        <li>Email <a id="contact-email-2" href="#" style="color:#f3ce66;">this address</a> from your account's associated email address, with the subject line "Delete specific data &mdash; SnowKeep".</li>
         <li>Describe exactly which data you want removed (for example, historical financial transactions from an already-unlinked account, or specific document references).</li>
         <li>The developer will confirm and complete the request, typically within a few days, without deleting your account or any other data.</li>
       </ol>
     </section>
 
-    <p class="contact">Questions about this process? Contact <a href="mailto:dev@raiiwinters.net">dev@raiiwinters.net</a>.</p>
+    <p class="contact">Questions about this process? Contact <a id="contact-email" href="#">this address</a>.</p>
   </main>
 
   <footer>
     &copy; 2026 Raii Winters &mdash; SnowKeep is a private personal project.
   </footer>
 
+
+  <script>
+    (function() {
+      var user = 'dev';
+      var domain = 'raiiwinters.net';
+      var email = user + '@' + domain;
+      var link = document.getElementById('contact-email');
+      if (link) {
+        link.href = 'mailto:' + email;
+        link.textContent = email;
+      }
+      var link2 = document.getElementById('contact-email-2');
+      if (link2) {
+        link2.href = 'mailto:' + email;
+        link2.textContent = email;
+      }
+    })();
+  </script>
 </body>
 </html>

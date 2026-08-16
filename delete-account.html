@@ -229,7 +229,7 @@
     <section class="block">
       <h3>How to request deletion</h3>
       <ol class="steps">
-        <li>Email <a href="mailto:dev@raiiwinters.net" style="color:#f3ce66;">dev@raiiwinters.net</a> from the email address associated with your SnowKeep account, with the subject line "Delete my SnowKeep account".</li>
+        <li>Email <a id="contact-email-2" href="#" style="color:#f3ce66;">this address</a> from the email address associated with your SnowKeep account, with the subject line "Delete my SnowKeep account".</li>
         <li>State clearly whether you want your entire account deleted, or only specific data (for example, medication history, or a linked bank connection) removed while keeping your account active.</li>
         <li>The developer will confirm your identity directly, since this is a closed, personally-known-user application, and complete the request.</li>
       </ol>
@@ -276,12 +276,30 @@
       </p>
     </section>
 
-    <p class="contact">Questions about this process? Contact <a href="mailto:dev@raiiwinters.net">dev@raiiwinters.net</a>.</p>
+    <p class="contact">Questions about this process? Contact <a id="contact-email" href="#">this address</a>.</p>
   </main>
 
   <footer>
     &copy; 2026 Raii Winters &mdash; SnowKeep is a private personal project.
   </footer>
 
+
+  <script>
+    (function() {
+      var user = 'dev';
+      var domain = 'raiiwinters.net';
+      var email = user + '@' + domain;
+      var link = document.getElementById('contact-email');
+      if (link) {
+        link.href = 'mailto:' + email;
+        link.textContent = email;
+      }
+      var link2 = document.getElementById('contact-email-2');
+      if (link2) {
+        link2.href = 'mailto:' + email;
+        link2.textContent = email;
+      }
+    })();
+  </script>
 </body>
 </html>

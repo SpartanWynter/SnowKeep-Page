@@ -360,12 +360,25 @@
       </p>
     </section>
 
-    <p class="contact">Questions or concerns? Contact the developer at <a href="mailto:dev@raiiwinters.net">dev@raiiwinters.net</a>.</p>
+    <p class="contact">Questions or concerns? Contact the developer at <a id="contact-email" href="#">this address</a>.</p>
   </main>
 
   <footer>
     &copy; 2026 Raii Winters &mdash; SnowKeep is a private personal project.
   </footer>
 
+
+  <script>
+    (function() {
+      var user = 'dev';
+      var domain = 'raiiwinters.net';
+      var link = document.getElementById('contact-email');
+      if (link) {
+        var email = user + '@' + domain;
+        link.href = 'mailto:' + email;
+        link.textContent = email;
+      }
+    })();
+  </script>
 </body>
 </html>
